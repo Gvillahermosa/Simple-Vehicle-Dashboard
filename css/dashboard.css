@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,281 +15,201 @@ body {
 }
 
 .vehicle-dashboard {
-    background: #0d0d0d;
-    border-radius: 15px;
-    padding: 30px;
-    max-width: 900px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
     width: 100%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-    border: 2px solid #1a1a1a;
+    border: 1px solid #e8eaed;
 }
 
-h1 {
+.vehicle-dashboard h1 {
     text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-    color: #666;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    color: #1a1a1a;
+    margin-bottom: 35px;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 .vehicle-dashboard p {
-    font-size: 0.85rem;
-    margin: 8px 0;
-    padding: 0;
+    font-size: 1.1em;
+    color: #5f6368;
+    margin: 12px 0;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    border-left: 4px solid #e8eaed;
 }
 
-.vehicle-dashboard span {
-    font-weight: 700;
-    font-size: 3rem;
-    font-family: 'Arial Black', sans-serif;
-    line-height: 1;
+.vehicle-dashboard p span {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 1.2em;
 }
 
 #engine-status {
-    color: #ff3333;
-    text-shadow: 0 0 20px rgba(255, 51, 51, 0.8);
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    background: #f1f3f4;
+    color: #5f6368;
 }
 
 #speed {
-    color: #00ff88;
-    text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+    color: #34a853;
 }
 
 #fuel-level {
-    color: #00d4ff;
-    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+    color: #fbbc04;
 }
 
 #lights-status {
-    color: #ffaa00;
-    text-shadow: 0 0 20px rgba(255, 170, 0, 0.6);
+    color: #4285f4;
 }
 
-/* Gauge-style layout */
-.vehicle-dashboard > p:nth-child(2) {
-    text-align: center;
-    flex-direction: column;
-    margin: 20px 0 30px 0;
-    padding: 20px;
-    background: radial-gradient(circle, #1a1a1a 0%, #0d0d0d 70%);
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #222;
-    box-shadow:
-        inset 0 0 20px rgba(0, 0, 0, 0.8),
-        0 0 30px rgba(255, 51, 51, 0.3);
-}
-
-.vehicle-dashboard > p:nth-child(3) {
-    text-align: center;
-    flex-direction: column;
-    margin: 20px auto;
-    padding: 30px;
-    background: radial-gradient(circle, #1a1a1a 0%, #0d0d0d 70%);
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid #00ff88;
-    box-shadow:
-        inset 0 0 30px rgba(0, 0, 0, 0.8),
-        0 0 50px rgba(0, 255, 136, 0.5);
-}
-
-.vehicle-dashboard > p:nth-child(4),
-.vehicle-dashboard > p:nth-child(5) {
-    text-align: center;
-    flex-direction: column;
-    padding: 15px;
-    background: #1a1a1a;
+button {
+    width: 100%;
+    padding: 16px;
+    margin: 10px 0;
+    border: 2px solid transparent;
     border-radius: 10px;
-    border: 2px solid #222;
-    margin: 10px 5px;
-    width: calc(50% - 10px);
-    display: inline-flex;
-}
-
-.vehicle-dashboard > p:nth-child(4) {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-}
-
-.vehicle-dashboard > p:nth-child(5) {
-    box-shadow: 0 0 20px rgba(255, 170, 0, 0.3);
-}
-
-.vehicle-dashboard button {
-    background: #1a1a1a;
-    color: #fff;
-    border: 2px solid #333;
-    padding: 15px 20px;
-    margin: 6px 3px;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.vehicle-dashboard button:hover {
-    border-color: #555;
-    background: #222;
-}
-
-.vehicle-dashboard button:active {
-    background: #0d0d0d;
+    background: white;
+    color: #1a1a1a;
 }
 
 #toggle-engine {
-    background: #1a4d2e;
-    border-color: #27ae60;
-    color: #27ae60;
+    background: #34a853;
+    color: white;
+    border-color: #34a853;
 }
 
 #toggle-engine:hover {
-    background: #27ae60;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(39, 174, 96, 0.5);
+    background: #2d9148;
+    box-shadow: 0 2px 8px rgba(52, 168, 83, 0.3);
 }
 
 #toggle-off-engine {
-    background: #4d1a1a;
-    border-color: #e74c3c;
-    color: #e74c3c;
+    background: white;
+    color: #ea4335;
+    border-color: #ea4335;
 }
 
 #toggle-off-engine:hover {
-    background: #e74c3c;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+    background: #ea4335;
+    color: white;
+    box-shadow: 0 2px 8px rgba(234, 67, 53, 0.3);
 }
 
 #accelerate {
-    background: #4d3a1a;
-    border-color: #f39c12;
-    color: #f39c12;
+    background: white;
+    color: #4285f4;
+    border-color: #4285f4;
 }
 
-#accelerate:hover {
-    background: #f39c12;
-    color: #000;
-    box-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
+#accelerate:hover:not(:disabled) {
+    background: #4285f4;
+    color: white;
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
 }
 
 #brake {
-    background: #4d1a1a;
-    border-color: #c0392b;
-    color: #c0392b;
+    background: white;
+    color: #fbbc04;
+    border-color: #fbbc04;
 }
 
-#brake:hover {
-    background: #c0392b;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(192, 57, 43, 0.5);
+#brake:hover:not(:disabled) {
+    background: #fbbc04;
+    color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(251, 188, 4, 0.3);
 }
 
 #toggle-lights {
-    background: #4d4d1a;
-    border-color: #f1c40f;
-    color: #f1c40f;
+    background: white;
+    color: #00acc1;
+    border-color: #00acc1;
 }
 
-#toggle-lights:hover {
-    background: #f1c40f;
-    color: #000;
-    box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+#toggle-lights:hover:not(:disabled) {
+    background: #00acc1;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 172, 193, 0.3);
 }
 
 #refuel {
-    background: #1a3a4d;
-    border-color: #3498db;
-    color: #3498db;
+    background: white;
+    color: #9334e6;
+    border-color: #9334e6;
 }
 
 #refuel:hover {
-    background: #3498db;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+    background: #9334e6;
+    color: white;
+    box-shadow: 0 2px 8px rgba(147, 52, 230, 0.3);
 }
 
-.vehicle-dashboard button:disabled {
-    background: #0d0d0d;
-    border-color: #1a1a1a;
-    color: #333;
+button:disabled {
+    opacity: 0.4;
     cursor: not-allowed;
+    border-color: #e8eaed;
+    color: #9aa0a6;
 }
 
-.vehicle-dashboard button:disabled:hover {
-    background: #0d0d0d;
+button:disabled:hover {
+    background: white;
     box-shadow: none;
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.98);
 }
 
 #message {
     margin-top: 20px;
-    padding: 15px;
-    background: #1a0d0d;
-    border: 2px solid #ff3333;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 16px;
+    border-radius: 10px;
     text-align: center;
-    color: #ff3333;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 0 20px rgba(255, 51, 51, 0.3);
+    font-weight: 500;
+    font-size: 0.95em;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fef7e0;
+    color: #7f6003;
+    border: 1px solid #fbbc04;
 }
 
 #message:empty {
     display: none;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .vehicle-dashboard {
-        padding: 20px;
+        padding: 25px;
     }
 
-    h1 {
-        font-size: 1.1rem;
+    .vehicle-dashboard h1 {
+        font-size: 1.6em;
     }
 
-    .vehicle-dashboard > p:nth-child(2) {
-        width: 150px;
-        height: 150px;
+    .vehicle-dashboard p {
+        font-size: 1em;
+        padding: 14px 16px;
     }
 
-    .vehicle-dashboard > p:nth-child(3) {
-        width: 200px;
-        height: 200px;
-    }
-
-    .vehicle-dashboard span {
-        font-size: 2.5rem;
-    }
-
-    .vehicle-dashboard > p:nth-child(4),
-    .vehicle-dashboard > p:nth-child(5) {
-        width: 100%;
-    }
-
-    .vehicle-dashboard button {
-        width: 100%;
-        margin: 5px 0;
+    button {
+        padding: 14px;
+        font-size: 0.95em;
     }
 }
